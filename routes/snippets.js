@@ -6,11 +6,11 @@ const baseURL = "http://localhost/snippets/";
 
 
 /* Create the snippets */
-router.get('/', (req, res, next) => {
+router.post('/', (req, res, next) => {
 
-    // const name = req.body.name;
-    const name = req.query.name;
-    const params = req.query;
+    const name = req.body.name;
+    // const name = req.query.name;
+    const params = req.body;
     var filepath = "data/" + name;
 
     utils.checkForFile(
